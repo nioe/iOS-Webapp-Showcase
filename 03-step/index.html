@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>iOS Webapp Showcase - Step 2</title>
-	
-	<!-- No Safari title bar -->
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-    
-	<!-- No zooming on page -->
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
-	
-	<!-- Bootstrap -->
-	<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+   <title>iOS Webapp Showcase - Step 2</title>
+   
+   <!-- No Safari title bar -->
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   
+   <!-- No zooming on page -->
+   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+   
+   <!-- Bootstrap -->
+   <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-	<!-- iOS -->
-    <link rel="apple-touch-icon-precomposed" href="../img/app-icons/60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/app-icons/120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/app-icons/72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="#../img/app-icons/144.png" />
+   <!-- iOS -->
+   <link rel="apple-touch-icon-precomposed" href="../img/app-icons/60.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../img/app-icons/120.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/app-icons/72.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="#../img/app-icons/144.png" />
+
+   <link rel="apple-touch-startup-image" media="(device-width: 320px)" href="../img/startup/startup_iphone_portrait.png" />
+   <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="../img/startup/startup_iphone_portrait_2x.png" />
+   <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="../img/startup/startup_iphone5_portrait.png" />
+   <link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: portrait)" href="../img/startup/startup_ipad_portrait.png" />
+   <link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: landscape)" href="../img/startup/startup_ipad_landscape.png" />
+   <link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="../img/startup/startup_ipad_portrait_2x.png" />
+   <link rel="apple-touch-startup-image" media="(device-width: 768px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="../img/startup/startup_ipad_landscape_2x.png" />
 </head>
 <body>
-	<div class="hero-unit">
-		<h2>Step 2</h2>
-		<p>Remove Safari's address bar and prevent the user from zooming in and out on your page.<br /><br/>
-		Simply add these to lines to the &lt;head&gt;-section of your application:</p>
-		<pre>&lt;meta name="apple-mobile-web-app-capable" content="yes" /&gt;
-&lt;meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" /&gt;</pre>
+   <div class="hero-unit">
+      <h2>Step 3</h2>
+      <p>Add a splash screen to your app which will be shown while the app is starting respectively your webpage is loading.<br /><br/>
+         We need to create several images:
+         <ul>
+            <li>iPhone Portrait: 320 x 460 px</li>
+            <li>iPhone Retina Portrait: 640 x 920 px</li>
+            <li>iPhone 5 Portrait: 640 x 1096 px</li>
+            <li>iPad Portrait: 768 x 1004 px</li>
+            <li>iPad Landscape: 748 x 1024 px <b>*</b></li>
+            <li>iPad Retina Portrait: 1536 x 2008 px</li>
+            <li>iPad Retina Landscape: 1496 x 2048 px <b>*</b></li>
+         </ul>
+         <b>* Important:</b> Please note that the landscape images have to be rotated one time clockwise. Because of the information bar in iOS the resolution is different from the portrait images!
+      </p>
+      <pre>&lt;link rel="apple-touch-startup-image" media="(device-width: 320px)" href="img/startup/startup_iphone_portrait.png" /&gt;
+&lt;link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="img/startup/startup_iphone_portrait_2x.png" /&gt;
+&lt;link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="img/startup/startup_iphone5_portrait.png" /&gt;
+&lt;link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: portrait)" href="img/startup/startup_ipad_portrait.png" /&gt;
+&lt;link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: landscape)" href="img/startup/startup_ipad_landscape.png" /&gt;
+&lt;link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="img/startup/startup_ipad_portrait_2x.png" /&gt;
+&lt;link rel="apple-touch-startup-image" media="(device-width: 768px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="img/startup/startup_ipad_landscape_2x.png" /&gt;</pre>
 
-		<p>The first line will tell iOS that your application shall be interpreted as an <i>Apple Mobile App</i> - which means nothing more than that Safri will remove its controls (Back- and Forward-Button, Address-Bar, etc.).<br /><br />
-		When you add this page to your homescreen and open the newly created <i>App</i> you won't see Safari's controls anymore - Yeah! Have a look at your multitask overview screen. You'll notice that iOS treats your Webapp now also as an independent task.</p>
+      <p>I prepared a zip-file with Adobe Photoshop files for all the different resolutions. You can download it here:<p>
+      <p class="text-center">
+         <a class="btn btn-primary btn-large" href="iOS_Splash_Screens.zip">Download</a>
+      <p/>
 
-		<p class="text-center">
-			<a class="btn btn-warning btn-large" href="../01-step"><i class="icon-white icon-large icon-chevron-left"></i></a>
-			<a class="btn btn-warning btn-large" href="../"><i class="icon-white icon-large icon-chevron-up"></i></a>
-			<a class="btn btn-warning btn-large" href="../03-step"><i class="icon-white icon-large icon-chevron-right"></i></a>
-		</p>
-	</div>
+      <p class="text-center">
+         <a class="btn btn-warning btn-large" href="../02-step"><i class="icon-white icon-large icon-chevron-left"></i></a>
+         <a class="btn btn-warning btn-large" href="../"><i class="icon-white icon-large icon-chevron-up"></i></a>
+      </p>
+   </div>
 </body>
 </html>
