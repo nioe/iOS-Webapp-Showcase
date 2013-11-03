@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iOS Webapp Showcase - Step 1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+	<div class="hero-unit">
+		<h2>Step 1</h2>
+		<p>Add a app icon which will be shown on homesreen</p>
+
+		<p>First of all we need to create an icon. I used <a href="http://medialoot.com/item/iphone-app-icon-kit/">Medialoot's iPhone App Icon Kit</a> to design one...</p>
+		<img class="img-polaroid" src="../img/app-icons/144.png" />
+
+		<p>We need one icon for every possible resolution:
+			<&lt;= iPhone 3G 58x58px, &gt;= iPhone 4 72x72px, iPad 1/2 114x114px, &gt;= new iPad 144x144px). To let iOS know where to find your icons for the different resolutions simply add these lines to your &lt;head&gt;-Tag on your page.</p>
+		<pre>
+&lt;link rel="apple-touch-icon-precomposed" href="#{resource['icon:58.png']}" /&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="#{resource['icon:72.png']}" /&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="#{resource['icon:114.png']}" /&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="#{resource['icon:144.png']}" /&gt;
+		</pre>
+	</div>
+</body>
+</html>
