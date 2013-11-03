@@ -6,6 +6,12 @@
    <!-- No Safari title bar -->
    <meta name="apple-mobile-web-app-capable" content="yes" />
 
+   <!-- Make the status bar black with white text. -->
+   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 
+   <!-- Customize home screen title. -->
+   <meta name="apple-mobile-web-app-title" content="Step 2">
+
    <!-- No zooming on page -->
    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
    
@@ -21,12 +27,14 @@
 <body>
    <div class="hero-unit">
       <h2>Step 2</h2>
-      <p>Remove Safari's address bar and prevent the user from zooming in and out on your page.<br /><br/>
+      <p>Remove Safari's address bar, set status bar to black, set a iOS specific title and prevent the user from zooming in and out on your page.<br /><br/>
          Simply add these to lines to the &lt;head&gt;-section of your application:</p>
          <pre>&lt;meta name="apple-mobile-web-app-capable" content="yes" /&gt;
+&lt;meta name="apple-mobile-web-app-status-bar-style" content="black"&gt;
+&lt;meta name="apple-mobile-web-app-title" content="Fullscreen WebApp"&gt;
 &lt;meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" /&gt;</pre>
 
-      <p>The first line will tell iOS that your application shall be interpreted as an <i>Apple Mobile App</i> - which means nothing more than that Safri will remove its controls (Back- and Forward-Button, Address-Bar, etc.).<br /><br />When you add this page to your homescreen and open the newly created <i>App</i> you won't see Safari's controls anymore - Yeah! Have a look at your multitask overview screen. You'll notice that iOS treats your Webapp now also as an independent task.
+      <p>When you add this page to your homescreen and open the newly created <i>App</i> you won't see Safari's controls anymore - Yeah! Have a look at your multitask overview screen. You'll notice that iOS treats your Webapp now also as an independent task.
       </p>
       <p class="text-center">
          <a class="btn btn-warning btn-large" href="../01-step"><i class="icon-white icon-large icon-chevron-left"></i></a>
